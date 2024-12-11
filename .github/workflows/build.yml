@@ -46,4 +46,4 @@ jobs:
         if: success()
         with:
           name: snander_electricboogaloo_eeprom-${{ matrix.eeprom_enabled }}_ch341a-${{ matrix.ch341a_enabled }}_mstarddc-${{ matrix.mstarddc_enabled }}
-          path: builddir/src/snander_electricboogaloo
+          path: builddir/
