@@ -36,8 +36,8 @@ jobs:
         run: ./src/snander_electricboogaloo --help
         working-directory: builddir
       - name: Archive meson log
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: meson-log
+          name: meson-log_eeprom-${{ matrix.eeprom_enabled }}_ch341a-${{ matrix.ch341a_enabled }}_mstarddc-${{ matrix.mstarddc_enabled }}
           path: builddir/meson-logs/meson-log.txt
