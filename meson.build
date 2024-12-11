@@ -16,13 +16,13 @@ libdgpc_proj = subproject('libdgpc')
 libdpgc_dep = libdgpc_proj.get_variable('libdgpc_dep')
 log_macros_tmpl = libdgpc_proj.get_variable('log_macros_no_var_tmpl')
 
-libusrio_dep = dependency('libusrio', required : false)
+libusrio_dep = dependency('libusrio', required : false, default_options: ['default_library=static'])
 if not libusrio_dep.found()
     libusrio_proj = subproject('libusrio')
     libusrio_dep = libusrio_proj.get_variable('libusrio_dep')
 endif
 
-libch341a_dep = dependency('libch341a', required : false)
+libch341a_dep = dependency('libch341a', required : false, default_options: ['default_library=static'])
 if not libch341a_dep.found()
     libch341a_proj = subproject('libch341a')
     libch341a_dep = libch341a_proj.get_variable('libch341a_dep')

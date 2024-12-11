@@ -21,7 +21,7 @@ src = [
        'file.c'
        ]
 
-argtable2 = dependency('argtable2')
+argtable2 = dependency('argtable2', default_options: ['default_library=static'])
 
 deps = [ argtable2, libusrio_dep, libdpgc_dep ]
 
