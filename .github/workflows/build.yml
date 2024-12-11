@@ -20,7 +20,7 @@ jobs:
       - name: Fix subprojects
         run: |
          git clone https://github.com/fifteenhex/libdgpc.git
-         git clone https://github.com/fifteenhex/libch341a.git
+         git clone https://github.com/HexRx/libch341a.git
          git clone https://github.com/HexRx/libusrio.git
          git clone https://github.com/fifteenhex/libebogroll.git
         working-directory: subprojects
